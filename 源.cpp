@@ -1,5 +1,7 @@
 #include <iostream>
+#include <vector>
 #include <math.h>
+#include <Windows.h>
 //#include "problem5.cpp"
 //#include "problem6.cpp"
 //#include "problem7.cpp"
@@ -31,14 +33,102 @@
 //#include "problem482.cpp"
 //#include "problem96.cpp"
 //#include "problem98.cpp"
-#include "problem102.cpp"
+//#include "problem102.cpp"
+//#include "problem23.cpp"
+//#include "problem24.cpp"
+//#include "problem25.cpp"
+//#include "problem50.cpp"
+//#include "problem500.cpp"
+//#include "problem28.cpp"
+//#include "problem230.cpp"
+//#include "problem224.cpp"
+//#include "problem151.cpp"
+//#include "problem205.cpp"
+//#include "problem290.cpp"
+//#include "problem234.cpp"
+//#include "problem219.cpp"
+//#include "problem88.cpp"
+//#include "problem438.cpp"
+//#include "problem160.cpp"
+//#include "problem475.cpp"
+//#include "problem190.cpp"
+//#include "problem69.cpp"
+//#include "problem463.cpp"
+//#include "problem492.cpp"
+//#include "problem383.cpp"
+//#include "problem507.cpp"
+//#include "problem108.cpp"
+//#include "problem202.cpp"
+//#include "problem27.cpp"
+//#include "problem459.cpp"
+//#include "problem66.cpp"
+//#include "problem26.cpp"
+//#include "problem532.cpp"
+//#include "problem119.cpp"
+//#include "problem581.cpp"
+//#include "problem106.cpp"
+//#include "problem565.cpp"
+//#include "problem90.cpp"
+//#include "problem80.cpp"
+//#include "problem74.cpp"
+//#include "problem73.cpp"
+//#include "problem442.cpp"
+//#include "problem55.cpp"
+//#include "problem289.cpp"
+//#include "problem34.cpp"
+//#include "problem31.cpp"
+//#include "problem594.cpp"
+//#include "problem204.cpp"
+//#include "problem599.cpp"
+//#include "problem609.cpp"
+//#include "problem61.cpp"
+//#include "problem148.cpp"
+//#include "problem147.cpp"
+//#include "problem82.cpp"
+//#include "problem172.cpp"
+//#include "problem592.cpp"
+//#include "problem413.cpp"
+//#include "problem368.cpp"
+//#include "problem233.cpp"
+//#include "problem43.cpp"
+//#include "problem345.cpp"
+//#include "problem520.cpp"
+//#include "problem459.cpp"
+//#include "problem539.cpp"
+//#include "kmpcpp.cpp"
+//#include "problem274.cpp"
+//#include "problem529.cpp"
+//#include "problem417.cpp"
+//#include "problem310.cpp"
+//#include "problem210.cpp"
+//#include "problem617.cpp"
+//#include "problem114.cpp"
+//#include "problem117.cpp"
+//#include "problem394.cpp"
+//#include "problem633.cpp"
+//#include "problem51.cpp"
+//#include "problem46.cpp"
+//#include "problem127.cpp"
+//#include "problem376.cpp"
+//#include "problem632.cpp"
+//#include "problem137.cpp"
+//#include "problem491.cpp"
+//#include "problem583.cpp"
+//#include "newcoder_haoduoyu.cpp"
+//#include "problem309.cpp"
+//#include "problem640.cpp"
+#include "problem525.cpp"
 using namespace std;
 
 int main()
 {
-	Binary_Tree_Level_Order_Traversal btlot;
-	btlot.adaptor();
-
+	LARGE_INTEGER a, b, qc;
+	solution s;
+	QueryPerformanceFrequency(&qc);
+	QueryPerformanceCounter(&a);
+	s.adaptor();
+	QueryPerformanceCounter(&b);
+	cout << "used time: " << (b.QuadPart - a.QuadPart)*1.0 / qc.QuadPart << endl;
 	system("pause");
 	return 0;
 }
