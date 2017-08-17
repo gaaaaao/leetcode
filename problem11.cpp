@@ -22,24 +22,16 @@ inline void Container_With_Most_Water::adaptor()
 
 inline int Container_With_Most_Water::maxArea(vector<int>& height)
 {
-	int left = 0;
-	int right = height.size() - 1;
-	int maxArea = 0;
-
-	while (left < right)
-	{
-		if (height[left] >= height[right])
-		{
-			if (maxArea < height[right]*(right - left))
-				maxArea = height[right]*(right - left);
-			right--;
-		}
-		else if (height[left] < height[right])
-		{
-			if (maxArea < height[left] * (right - left))
-				maxArea = height[left] * (right - left);
-			left++;
-		}
-	}
-	return maxArea;
+        int water=0;
+        int i=0,j=height.size()-1;
+        
+        while(i<j){
+            water=max(water,min(height[i],height[j])*(j-i));
+            if(height[i]<height[j])
+                i++;
+            else
+                j--;
+        }
+        
+        return water;
 }
